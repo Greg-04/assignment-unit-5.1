@@ -10,6 +10,11 @@ console.log('***** Object Practice *****')
 */
 const me = {
   // TODO - add properties here
+  firstName: 'Gabriel',
+  lastName: 'Regalado',
+  hasSiblings: true,
+  shoeCount: 15,
+  favThreeFoods: ['Burgers', 'Tacos', 'Steak'],
 };
 console.log('A little about me:', me);
 
@@ -19,6 +24,9 @@ console.log('A little about me:', me);
     created above to set its value. 
   - Console.log fullName
 */
+fullName = `${me.firstName} ${me.lastName}`;
+console.log('My full name is', fullName);
+
 
 
 
@@ -26,6 +34,8 @@ console.log('A little about me:', me);
   - Console.log your first favorite food
   - Console.log your last favorite food 
 */
+console.log('First favorite food is', me.favThreeFoods[0]);
+console.log('Last favorite food is', me.favThreeFoods[me.favThreeFoods.length - 1]);
 
 
 
@@ -35,7 +45,11 @@ console.log('A little about me:', me);
   - Set your object's shoeCount to be what it was plus 1
   - Console.log your updated shoe count. 
 */
-
+console.log('My shoe count is', me.shoeCount);
+//Used a template literal for this however the new count is a string?
+console.log(`Got a new pair of shoes, I now have ${me.shoeCount += 1} pairs of shoes`);
+//Console logged new shoe count
+console.log('My new shoe count is', me.shoeCount);
 
 /* 5. Add a new property to an existing object.
   - Add a 'favoriteColor' to your existing object
@@ -43,3 +57,6 @@ console.log('A little about me:', me);
   - Cool huh? It works, even though it wasn't there before
   - Console.log your object
 */
+
+me.favoriteColor = 'Blue';
+console.log('Updated object', me);
